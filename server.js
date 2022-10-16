@@ -136,6 +136,7 @@ app.post("/get", async (request, response) => {
         });
 });
 
+
 app.post("/delete", async (request, response) => {
     if (!request.query.url) {
         return response.json({
@@ -204,6 +205,17 @@ app.post("/delete", async (request, response) => {
                 handleError(error, response);
             };
         });
+});
+
+
+app.post("/test", async (request, response) => {
+  
+        return response.json({
+            oof: {
+                message: "No URL Provided."
+            }
+        });
+   
 });
 
 app.post("/post", async (request, response) => {
